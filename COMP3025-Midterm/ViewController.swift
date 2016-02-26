@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ItemTwoValueLabel: UILabel!
     @IBOutlet weak var ItemThreeValueLabel: UILabel!
     @IBOutlet weak var ItemFourValueLabel: UILabel!
-    @IBOutlet weak var ItemFiveValuelabel: UILabel!
+    @IBOutlet weak var ItemFiveValueLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,10 +80,38 @@ class ViewController: UIViewController {
         ItemThreeValueLabel.text = String(itemThreeValue)
     }
     
-    @IBAction func DecrementItemFourButton(sender: UIButton) {
+    @IBAction func DecrementItemFourButtonClick(sender: UIButton) {
+        itemFourValue--
+        
+        if(itemFourValue < 0)
+        {
+            itemFourValue = 0
+        } //if ends
+        
+        ItemFourValueLabel.text = String(itemFourValue)
     }
     
-    @IBAction func IncrementitemFourButtonClick(sender: UIButton) {
+    @IBAction func IncrementItemFourButtonClick(sender: UIButton) {
+        itemFourValue++
+        
+        ItemFourValueLabel.text = String(itemFourValue)
+    }
+   
+    @IBAction func DecrementItemFiveButtonClick(sender: UIButton) {
+        itemFiveValue--
+        
+        if(itemFiveValue < 0)
+        {
+            itemFiveValue = 0
+        } //if ends
+        
+        ItemFiveValueLabel.text = String(itemFiveValue)
+    }
+    
+    @IBAction func IncrementItemFiveButtonClick(sender: UIButton) {
+        itemFiveValue++
+        
+        ItemFiveValueLabel.text = String(itemFiveValue)
     }
     
     
